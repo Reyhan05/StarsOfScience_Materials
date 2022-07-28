@@ -48,16 +48,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        profileCardContainer.setBackgroundColor(R.color.colorPrimary.toColorInt(this))
         val azureColor = R.color.colorPrimary.toColorInt(this)
         val avatarRadius = R.dimen.avatar_radius.resToPx(this)
         val avatarMargin = R.dimen.avatar_margin.resToPx(this)
         val cardWidth = ViewGroup.LayoutParams.MATCH_PARENT
         val cardHeight = R.dimen.profile_card_height.resToPx(this).toInt()
-
+//2
         val painter = ProfileCardPainter(
-            color = azureColor
+            color = azureColor,
+            avatarRadius = avatarRadius,
+            avatarMargin = avatarMargin
+
+
         )
+//3
         profileCardContainer.addView(
             CustomPainter(
                 context = this,
